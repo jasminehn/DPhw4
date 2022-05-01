@@ -11,13 +11,36 @@
 </head>
 <body>
     <div class="navbar">
+        <p class="fav-button">Favorites <i class="fa-solid fa-bars"></i></p>
         
-        <div class="favorites">
-            <select name="decade" id="decade">
-                <option value="song1">FAVORITES</option>
-                <option value="song2">lol</option>
-            </select>
-        </div>
+    </div>
+    <div class="favorites">
+        <table class="fav-list" id="favorites-table">
+            <tbody>
+                <tr class="fav-song">
+                    <td>
+                        <img src="album-covers/Cars_Soundtrack.jpg" class="album-cover">
+                    </td>
+                    <td>
+                        <p class="song-title">Life is a Highway</p>
+                        <p class="song-artist">dem boys</p>
+                    </td>
+                    <td class="play-song"><i class="fa-solid fa-circle-play"></i></td>
+                    <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
+                </tr>
+                <tr class="fav-song">
+                    <td>
+                        <img src="album-covers/Cars_Soundtrack.jpg" class="album-cover">
+                    </td>
+                    <td>
+                        <p class="song-title">Life is a Highway</p>
+                        <p class="song-artist">dem boys</p>
+                    </td>
+                    <td class="play-song"><i class="fa-solid fa-circle-play"></i></td>
+                    <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <main>
         <!--
@@ -73,8 +96,13 @@
         <div class="songs">
             <div class="container-flex text-center">
               <div class="music-card">
-                <a href="#"><img src="album-covers/Cars_Soundtrack.jpg" alt=""></a>
-                <p class="song-title">Life is a Highway</p>
+                
+                <a href="#"><img src="album-covers/Cars_Soundtrack.jpg" alt="" class="album-cover"></a>
+                <div class="overlay image__overlay">
+                    <i class="fa-solid fa-circle-play"></i>
+                    <i class="fa-solid fa-circle-plus add-item"></i>
+                </div>
+                <p class="song-title">Life is a yete</p>
                 <p class="song-artist">dem boys</p>
               </div>
               <div class="music-card">
