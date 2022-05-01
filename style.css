@@ -62,41 +62,32 @@ select{
 .navbar{
     height: 50px;
     width: 100%;
-    
+    /*
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-
+    */
     background-color: #2c3e50;
     font-size: 15px;
 }
 
-.navbar a{
-    color: white;
+.favorites{
+    padding: 12px;
+    float: right;
 }
-
-.navbar .fa-solid {
-    cursor: pointer;
-    color: white;
-}
-
-
 
 .navbar select{
     background-color: #2c3e50;
     color: white;
-    padding: 5px;
+    
     width: 150px;
     border: none;
     font-size: 20px;
     -webkit-appearance: button;
     appearance: button;
     outline: none;
-    padding: 15px;
 }
-
-
 
 /*-----------------------TITLE------------------*/
 .title{
@@ -170,7 +161,9 @@ select{
 
 }
 
-/*---------------------FAVORITES--------------------*/
+.song-artist{
+
+}
 
 /*-------------FOOTER-------------------------*/
 .footer {
@@ -178,25 +171,23 @@ select{
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
+    
     background-color: #000000;
     text-align: center;
 }
 
 .footer a{
-    color: white;
+    color: rgb(124, 124, 124);
     padding: 15px;
 }
 
 .footer a:hover{
-    background-color: #9e6161;
-    color: aqua;
-    transition: 0.3s;
+    color: white;
+    transition: 0.3s all;
 }
 
 .lightdark{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
 }
