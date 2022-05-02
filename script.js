@@ -21,16 +21,25 @@ function ready() {
         }
     })
 
+    //add to favorites
     var addToFavoritesButtons = document.getElementsByClassName('add-item')
     for (var i = 0; i < addToFavoritesButtons.length; i++) {
         var button = addToFavoritesButtons[i]
         button.addEventListener('click', addToFavoritesClicked)
     }
+
+    //remove from favorites
+    var removeItemButtons = document.getElementsByClassName('remove-item')
+    for (var i = 0; i < removeItemButtons.length; i++) {
+        var button = removeItemButtons[i]
+        button.addEventListener('click', removeItem)
+    }
+
 }
 
 function addToFavoritesClicked(event) {
     var button = event.target
-    var song = button.parentElement.parentElement
+    var song = button.parentElement.parentElement.parentElement
     var title = song.getElementsByClassName('song-title')[0].innerText
     var artist = song.getElementsByClassName('song-artist')[0].innerText
     var albumCover = song.getElementsByClassName('album-cover')[0].src
@@ -73,5 +82,11 @@ function addToFavorites(title, artist, albumCover) {
 
     favListRow.innerHTML = favListRowContents
     //favListRow.getElementsByClassName('play-song')[0].addEventListener('click', playSong)
-    //favListRow.getElementsByClassName('remove-item')[0].addEventListener('click', removeItem)
+    favListRow.getElementsByClassName('remove-item')[0].addEventListener('click', removeItem)
+}
+
+function removeItem(event) {
+    var buttonClicked = event.target
+    console.log(buttonClicked.parentElement.parentElement)
+    buttonClicked.parentElement.parentElement.remove()
 }

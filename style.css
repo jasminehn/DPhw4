@@ -162,6 +162,7 @@ select{
     margin: 10px 20px;
     padding: 25px 15px;
     border-radius: 8px;
+    width: 200px;
 
     /*
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -174,6 +175,7 @@ select{
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 
     position: relative;
+    
 }
 
 .music-card img {
@@ -185,6 +187,7 @@ select{
     font-weight: bold;
     padding-top: 10px;
     /*text-align: center;*/
+    
 }
 
 .song-title{
@@ -197,10 +200,16 @@ select{
     font-size: 11px;
 }
 
+.album-cover{
+    display: block;
+}
+
 .overlay{
     color: white;
-    font-size: 26px;
-    padding-top: 8px;
+    font-size: 36px;
+    /* padding-top: 8px; */
+    position: relative;
+    
 }
 
 .image__overlay {
@@ -209,21 +218,68 @@ select{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     opacity: 0;
     transition: opacity 0.25s;
+
+    border-radius: 8px;
 }
 
-.image__overlay:hover {
+.image__overlay:hover { }
+
+.music-card:hover .image__overlay{
     opacity: 1;
 }
 
-.image__overlay--blur {
-    backdrop-filter: blur(5px);
+/*-------------------PLAYER------------------------*/
+.music-player{
+    margin: 0 auto 15px;
+    width: 50%;
+    padding: 10px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: #0e1319;
+    color: white;
+    border-radius: 10px;
+}
+
+.music-player img{
+    max-width: 50px;
+    border-radius: 8px;
+}
+
+.music-player .fa-solid{
+    margin: 0 10px;
+}
+
+.music-player .fa-circle-play{
+    font-size: 30px;
+}
+
+.music-player .controls{
+    width: 50%;
+}
+
+.music-player .song-info{
+    padding: 0 10px;
+}
+
+.current-song{
+    display: flex;
+    flex-direction: row;
+    
+    padding: 0 10px;
+    /*
+    margin-left: auto; 
+    margin-right: 0;
+    */
 }
 
 /*-------------FOOTER-------------------------*/
