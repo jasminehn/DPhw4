@@ -21,6 +21,18 @@ function ready() {
         }
     })
 
+    //play song
+    var playSongButtons = document.getElementsByClassName('play-song')
+    for (var i = 0; i < playSongButtons.length; i++) {
+        var button = playSongButtons[i]
+        button.addEventListener('click', playSongClicked)
+    }
+    var playSongFromFavsButtons = document.getElementsByClassName('play-song-favs')
+    for (var i = 0; i < playSongFromFavsButtons.length; i++) {
+        var button = playSongFromFavsButtons[i]
+        button.addEventListener('click', playSongFromFavsClicked)
+    }
+
     //add to favorites
     var addToFavoritesButtons = document.getElementsByClassName('add-item')
     for (var i = 0; i < addToFavoritesButtons.length; i++) {
@@ -44,7 +56,6 @@ function addToFavoritesClicked(event) {
     var artist = song.getElementsByClassName('song-artist')[0].innerText
     var albumCover = song.getElementsByClassName('album-cover')[0].src
     addToFavorites(title, artist, albumCover)
-    //updateCartTotal()
 }
 
 function addToFavorites(title, artist, albumCover) {
@@ -52,7 +63,6 @@ function addToFavorites(title, artist, albumCover) {
     
     var favSongs = document.getElementById('favorites-table');
     var favSongNames = favSongs.getElementsByClassName('song-title')
-    
     for (var i = 0; i < favSongNames.length; i++) {
         if (favSongNames[i].innerText == title) {
             console.log("YEET")
@@ -75,18 +85,57 @@ function addToFavorites(title, artist, albumCover) {
                 <p class="song-title">${title}</p>
                 <p class="song-artist">${artist}</p>
             </td>
-            <td class="play-song"><i class="fa-solid fa-circle-play"></i></td>
+            <td class="play-song-favs"><i class="fa-solid fa-circle-play"></i></td>
             <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
         </tr>
         `
 
     favListRow.innerHTML = favListRowContents
-    //favListRow.getElementsByClassName('play-song')[0].addEventListener('click', playSong)
+    favListRow.getElementsByClassName('play-song-favs')[0].addEventListener('click', playSongFromFavsClicked)
     favListRow.getElementsByClassName('remove-item')[0].addEventListener('click', removeItem)
+}
+
+function playSongClicked(event) {
+    var button = event.target
+    var song = button.parentElement.parentElement.parentElement
+    var title = song.getElementsByClassName('song-title')[0].innerText
+    var artist = song.getElementsByClassName('song-artist')[0].innerText
+    var albumCover = song.getElementsByClassName('album-cover')[0].src
+    playSong(title, artist, albumCover)
+}
+
+function playSongFromFavsClicked(event) {
+    var button = event.target
+    var song = button.parentElement.parentElement
+    var title = song.getElementsByClassName('song-title')[0].innerText
+    var artist = song.getElementsByClassName('song-artist')[0].innerText
+    var albumCover = song.getElementsByClassName('album-cover')[0].src
+    playSong(title, artist, albumCover)
+}
+
+function playSong(title, artist, albumCover){
+    console.log('playing music')
+
+    //restart song
+    var audio = document.getElementsByClassName('song-progress')[0]
+    audio.currentTime = 0
+
+    //put song info in player
+    var currentsong = document.getElementsByClassName('current-song')[0] //where to instert new stuff
+    var newPlayingContents = `
+        <img src="${albumCover}" class="album-cover">
+        <div class="song-info">
+            <p class="song-title">${title}</p>
+            <p class="song-artist">${artist}</p>
+        </div>
+        `
+    
+    currentsong.innerHTML = newPlayingContents
 }
 
 function removeItem(event) {
     var buttonClicked = event.target
-    console.log(buttonClicked.parentElement.parentElement)
+    //console.log(buttonClicked.parentElement.parentElement)
     buttonClicked.parentElement.parentElement.remove()
+    
 }

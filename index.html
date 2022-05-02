@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/69c6d76ec7.js" crossorigin="anonymous"></script>
     <title>Cob's Soul Music</title>
@@ -12,36 +13,36 @@
 <body>
     <div class="navbar">
         <p class="fav-button">Favorites <i class="fa-solid fa-bars"></i></p>
-        
+        <div class="favorites">
+            <table class="fav-list" id="favorites-table">
+                <tbody>
+                    <tr class="fav-song">
+                        <td>
+                            <img src="album-covers/Cars_Soundtrack.jpg" class="album-cover">
+                        </td>
+                        <td>
+                            <p class="song-title">Life is a Highway</p>
+                            <p class="song-artist">Rascal Flatts</p>
+                        </td>
+                        <td class="play-song-favs"><i class="fa-solid fa-circle-play"></i></td>
+                        <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr class="fav-song">
+                        <td>
+                            <img src="album-covers/take on me.jpg" class="album-cover">
+                        </td>
+                        <td>
+                            <p class="song-title">Take On Me</p>
+                            <p class="song-artist">a-ha</p>
+                        </td>
+                        <td class="play-song-favs"><i class="fa-solid fa-circle-play"></i></td>
+                        <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="favorites">
-        <table class="fav-list" id="favorites-table">
-            <tbody>
-                <tr class="fav-song">
-                    <td>
-                        <img src="album-covers/Cars_Soundtrack.jpg" class="album-cover">
-                    </td>
-                    <td>
-                        <p class="song-title">Life is a Highway</p>
-                        <p class="song-artist">dem boys</p>
-                    </td>
-                    <td class="play-song"><i class="fa-solid fa-circle-play"></i></td>
-                    <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
-                </tr>
-                <tr class="fav-song">
-                    <td>
-                        <img src="album-covers/Cars_Soundtrack.jpg" class="album-cover">
-                    </td>
-                    <td>
-                        <p class="song-title">Life is a Highway</p>
-                        <p class="song-artist">dem boys</p>
-                    </td>
-                    <td class="play-song"><i class="fa-solid fa-circle-play"></i></td>
-                    <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <!--FAVS used to be outside of navbar, move back if it fucks it up-->
     <main>
         <h1 class="title">Cob's Soul Music</h1>
         
@@ -89,18 +90,18 @@
                     <div class="overlay">
                         <img src="album-covers/Cars_Soundtrack.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
                     <p class="song-title">Life is a Highway</p>
-                    <p class="song-artist">dem boys</p>
+                    <p class="song-artist">Rascal Flatts</p>
                 </div>
                 <div class="music-card 90s-music">
                     <div class="overlay">
                         <img src="album-covers/I want it that way - backstreet boys.jfif" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -111,7 +112,7 @@
                     <div class="overlay">
                         <img src="album-covers/gangstas paradise.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -122,7 +123,7 @@
                     <div class="overlay">
                         <img src="album-covers/baby one more time.png" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -133,7 +134,7 @@
                     <div class="overlay">
                         <img src="album-covers/heartshaped box.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -144,7 +145,7 @@
                     <div class="overlay">
                         <img src="album-covers/creep - radiohead.png" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -155,7 +156,7 @@
                     <div class="overlay">
                         <img src="album-covers/weak swv.gif" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -166,7 +167,7 @@
                     <div class="overlay">
                         <img src="album-covers/Another_one_bites_the_dust.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -177,7 +178,7 @@
                     <div class="overlay">
                         <img src="album-covers/Rock_With_You.webp" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -188,7 +189,7 @@
                     <div class="overlay">
                         <img src="album-covers/take on me.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -199,7 +200,7 @@
                     <div class="overlay">
                         <img src="album-covers/careless whisper.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -210,7 +211,7 @@
                     <div class="overlay">
                         <img src="album-covers/sweet love.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -221,7 +222,7 @@
                     <div class="overlay">
                         <img src="album-covers/Tom's_diner.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -232,7 +233,7 @@
                     <div class="overlay">
                         <img src="album-covers/material girl.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -243,7 +244,7 @@
                     <div class="overlay">
                         <img src="album-covers/I_Wanna_Rock.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -254,7 +255,7 @@
                     <div class="overlay">
                         <img src="album-covers/rocket man.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -265,7 +266,7 @@
                     <div class="overlay">
                         <img src="album-covers/a song for you.jfif" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -276,7 +277,7 @@
                     <div class="overlay">
                         <img src="album-covers/the chain.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -287,7 +288,7 @@
                     <div class="overlay">
                         <img src="album-covers/Kashmir.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -298,7 +299,7 @@
                     <div class="overlay">
                         <img src="album-covers/shining star.jfif" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -309,7 +310,7 @@
                     <div class="overlay">
                         <img src="album-covers/i wish - stevie wonder.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -320,7 +321,7 @@
                     <div class="overlay">
                         <img src="album-covers/my girl.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -331,7 +332,7 @@
                     <div class="overlay">
                         <img src="album-covers/a sunday kind of love.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -342,7 +343,7 @@
                     <div class="overlay">
                         <img src="album-covers/stand by me.jfif" alt="" class="album-cover">
                         <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play"></i>
+                            <i class="fa-solid fa-circle-play play-song"></i>
                             <i class="fa-solid fa-circle-plus add-item"></i>
                         </div>
                     </div>
@@ -361,17 +362,31 @@
                 </div>
             </div>
             <div class="controls-container">
+                <!--
                 <div class="controls">
                     <i class="fa-solid fa-backward"></i>
                     <i class="fa-solid fa-circle-play play-song"></i>
                     <i class="fa-solid fa-forward"></i>
                 </div>
+                -->
                 <div class="progress-container">
+                    <!--
                     <span>0:00</span>
                     <div class="progressbar">
                         <div class="progress"></div>
                     </div>
                     <span>3:49</span>
+                    -->
+                    <!--
+                    <span>0:00</span>
+                    <div class="bar">
+                        <input type="range" name="" id="seek" min="0" max="100" value="0" class="slider">
+                    </div>
+                    <span>3:49</span>
+                    -->
+                    <audio controls class="song-progress">
+                        <source src="songs/Rick Astley - Never Gonna Give You Up.mp3" type="audio/mpeg">
+                    </audio>
                 </div>
             </div>
         </div>
