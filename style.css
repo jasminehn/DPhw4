@@ -127,6 +127,7 @@ select{
     flex-direction: row;
     justify-content: space-around;
     margin: 30px 0;
+    color: white;
 }
 
 .filter-dropdown select{
@@ -187,7 +188,6 @@ select{
     font-weight: bold;
     padding-top: 10px;
     /*text-align: center;*/
-    
 }
 
 .song-title{
@@ -238,12 +238,13 @@ select{
 /*-------------------PLAYER------------------------*/
 .music-player{
     margin: 0 auto 15px;
-    width: 50%;
-    padding: 10px 0;
+    width: 80%;
+    padding: 10px;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    
 
     background-color: #0e1319;
     color: white;
@@ -255,6 +256,43 @@ select{
     border-radius: 8px;
 }
 
+.current-song{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    /* padding: 0 10px; */
+    gap: 10px;
+    /*
+    margin-left: auto; 
+    margin-right: 0;
+    */
+    /* width: 550px; */
+    flex-grow: 1;
+}
+
+.music-player .song-info{
+    /* padding: 0 10px; */
+    /* width: 150px; */
+}
+
+.controls-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    /* width: 450px; */
+    flex-grow: 9;
+}
+
+.music-player .controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .music-player .fa-solid{
     margin: 0 10px;
 }
@@ -263,23 +301,28 @@ select{
     font-size: 30px;
 }
 
-.music-player .controls{
-    width: 50%;
-}
-
-.music-player .song-info{
-    padding: 0 10px;
-}
-
-.current-song{
+.progress-container{
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    
-    padding: 0 10px;
-    /*
-    margin-left: auto; 
-    margin-right: 0;
-    */
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    color: white;
+}
+
+.progressbar{
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.progress{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: aliceblue;
 }
 
 /*-------------FOOTER-------------------------*/
