@@ -54,13 +54,21 @@ select{
     z-index: 999;
 }
 
-.fav-button{
-    cursor: pointer;
-    text-align: right;
+.other-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
 
-    padding: 12px;
     color: white;
+    padding: 12px;
     font-size: 20px;
+}
+.other-buttons p{
+    cursor: pointer;
+}
+
+.fav-button{
+    margin-left: auto;
 }
 
 /*----------------------FAVORITES----------------------*/
@@ -346,6 +354,9 @@ select{
     justify-content: center;
     gap: 1em;
     color: white;
+}
+.progress-container .fa-solid{
+    font-size: 25px;
 }
 
 .progressbar{
