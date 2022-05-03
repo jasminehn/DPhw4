@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="darkstyle.css">
+    <link rel="shortcut icon" href="#">
+    <script src="darkscript.js"></script>
+    <script src="https://kit.fontawesome.com/69c6d76ec7.js" crossorigin="anonymous"></script>
+    <title>Cob's Soul Music</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="other-buttons">
+            <p class="home-button">Home</p>
+            <p class="subs-button" onclick="emailSubscription()">Subscriptions</p>
+            <p class="fav-button">Favorites <i class="fa-solid fa-bars"></i></p>
+            
+        </div>
+        
+        <div class="favorites">
+            <table class="fav-list" id="favorites-table">
+                <tbody>
+                    <tr class="fav-song">
+                        <td>
+                            <img src="album-covers/Cars_Soundtrack.jpg" class="album-cover">
+                        </td>
+                        <td>
+                            <p class="song-title">Life is a Highway</p>
+                            <p class="song-artist">Rascal Flatts</p>
+                        </td>
+                        <td class="play-song-favs"><i class="fa-solid fa-circle-play"></i></td>
+                        <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr class="fav-song">
+                        <td>
+                            <img src="album-covers/take on me.jpg" class="album-cover">
+                        </td>
+                        <td>
+                            <p class="song-title">Take On Me</p>
+                            <p class="song-artist">a-ha</p>
+                        </td>
+                        <td class="play-song-favs"><i class="fa-solid fa-circle-play"></i></td>
+                        <td class="remove-item"><i class="fa-solid fa-trash"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="da-sale">
+        <div class="countdown-container">
+            <h1 id="headline">You earn your next free song in</h1>
+            <div id="countdown">
+            <ul>
+                <li><span id="days"></span>days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="point-system">
+        <p>For every 1 minute of music you listen to, you earn 10 points!</p>
+        <p>10,000 points can be traded in for an additonal day on your subscription.</p>
+    </div>
+    <main>
+        <h1 class="title">Cob's Soul Music</h1>
+        <div class="home-page">
+            <div class="filters">
+                <div id="decade-filter" class="filter-dropdown">
+                    <label for="decade">Decade:</label>
+                    <select name="decade" id="decade">
+                        <option value="modern">Modern</option>
+                        <option value="90s">90s</option>
+                        <option value="80s">80s</option>
+                        <option value="70s">70s</option>
+                        <option value="60s">60s</option>
+                    </select>
+                </div>
+                <div id="genre-filter" class="filter-dropdown">
+                    <label for="genre">Genre:</label>
+                    <select name="genre" id="genre">
+                        <option value="soul">Soul</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                    </select>
+                </div>
+                <div id="occasion-filter" class="filter-dropdown">
+                    <label for="occasion">Occasion:</label>
+                    <select name="occasion" id="occasion">
+                        <option value="party">Party</option>
+                        <option value="funeral">Funeral</option>
+                        <option value="workout">Workout</option>
+                        <option value="study">Study</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="songs">
+                <div class="container-flex text-center">
+                    <div class="music-card modern-music pop-music funeral-music">
+                        <div class="overlay">
+                            <img src="album-covers/Cars_Soundtrack.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Life is a Highway</p>
+                        <p class="song-artist">Rascal Flatts</p>
+                    </div>
+                    <div class="music-card modern-music pop-music party-music">
+                        <div class="overlay">
+                            <img src="album-covers/sandstorm darude.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Darude</p>
+                        <p class="song-artist">Sandstorm</p>
+                    </div>
+                    <div class="music-card 90s-music pop-music party-music">
+                        <div class="overlay">
+                            <img src="album-covers/I want it that way - backstreet boys.jfif" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">I want it that way</p>
+                        <p class="song-artist">Backstreet boys</p>
+                        <p class="sub-locked"><i class="fa-solid fa-sack-dollar"></i> Premium only</p>
+                    </div>
+                    <div class="music-card imposter">
+                        <div class="overlay">
+                            <img src="imposter-imgs/cereal flakes.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <a href="https://matias.ma/nsfw/">
+                                    <i class="fa-solid fa-rectangle-ad"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="song-title">Asbestos free</p>
+                        <p class="song-artist">Cereal Flakes</p>
+                    </div>
+                    <div class="music-card 90s-music soul-music workout-music">
+                        <div class="overlay">
+                            <img src="album-covers/gangstas paradise.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Gangsta's Paradise</p>
+                        <p class="song-artist">Coolio, L.V.</p>
+                    </div>
+                    <div class="music-card 90s-music pop-music party-music">
+                        <div class="overlay">
+                            <img src="album-covers/baby one more time.png" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Baby one more time</p>
+                        <p class="song-artist">Brittney Spears</p>
+                        <p class="sub-locked"><i class="fa-solid fa-sack-dollar"></i> Premium only</p>
+                    </div>
+                    <div class="music-card 90s-music rock-music study-music">
+                        <div class="overlay">
+                            <img src="album-covers/heartshaped box.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Heart-Shaped Box</p>
+                        <p class="song-artist">Nirvana</p>
+                        <p class="sub-ultra"><i class="fa-solid fa-sack-dollar"></i> Ultra only</p>
+                    </div>
+                    <div class="music-card 90s-music rock-music study-music">
+                        <div class="overlay">
+                            <img src="album-covers/creep - radiohead.png" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Creep</p>
+                        <p class="song-artist">Radiohead</p>
+                        <p class="sub-ultra"><i class="fa-solid fa-sack-dollar"></i> Ultra only</p>
+                    </div>
+                    <div class="music-card 90s-music pop-music study-music">
+                        <div class="overlay">
+                            <img src="album-covers/weak swv.gif" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Weak</p>
+                        <p class="song-artist">SWV</p>
+                    </div>
+                    <div class="music-card 80s-music pop-music party-music">
+                        <div class="overlay">
+                            <img src="album-covers/Rock_With_You.webp" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Rock With You</p>
+                        <p class="song-artist">Michael Jackson</p>
+                        <p class="sub-locked"><i class="fa-solid fa-sack-dollar"></i> Premium only</p>
+                    </div>
+                    <div class="music-card imposter">
+                        <div class="overlay">
+                            <img src="imposter-imgs/brake pads.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <a href="https://matias.ma/nsfw/">
+                                    <i class="fa-solid fa-rectangle-ad"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="song-title">They work every time, 50% of the time</p>
+                        <p class="song-artist">Jim's Brake Pads</p>
+                    </div>
+                    <div class="music-card 80s-music pop-music party-music">
+                        <div class="overlay">
+                            <img src="album-covers/take on me.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Take On Me</p>
+                        <p class="song-artist">a-ha</p>
+                        <p class="sub-ultra"><i class="fa-solid fa-sack-dollar"></i> Ultra only</p>
+                    </div>
+                    <div class="music-card 80s-music soul-music workout-music">
+                        <div class="overlay">
+                            <img src="album-covers/careless whisper.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Careless Whisper</p>
+                        <p class="song-artist">George Michael</p>
+                    </div>
+                    <div class="music-card 80s-music soul-music study-music">
+                        <div class="overlay">
+                            <img src="album-covers/sweet love.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Sweet Love</p>
+                        <p class="song-artist">Anita Baker</p>
+                        <p class="sub-locked"><i class="fa-solid fa-sack-dollar"></i> Premium only</p>
+                    </div>
+                    <div class="music-card 80s-music pop-music study-music">
+                        <div class="overlay">
+                            <img src="album-covers/Tom's_diner.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Tom's Diner</p>
+                        <p class="song-artist">Suzanne Vega</p>
+                        <p class="sub-locked"><i class="fa-solid fa-sack-dollar"></i> Premium only</p>
+                    </div>
+                    <div class="music-card 80s-music pop-music party-music">
+                        <div class="overlay">
+                            <img src="album-covers/material girl.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Material Girl</p>
+                        <p class="song-artist">Madonna</p>
+                    </div>
+                    <div class="music-card 80s-music rock-music workout-music">
+                        <div class="overlay">
+                            <img src="album-covers/I_Wanna_Rock.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">I Wanna Rock</p>
+                        <p class="song-artist">Twisted Sister</p>
+                        <p class="sub-locked"><i class="fa-solid fa-sack-dollar"></i> Premium only</p>
+                    </div>
+                    <div class="music-card 70s-music rock-music workout-music">
+                        <div class="overlay">
+                            <img src="album-covers/rocket man.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Rocket Man</p>
+                        <p class="song-artist">Elton John</p>
+                        <p class="sub-locked"><i class="fa-solid fa-sack-dollar"></i> Premium only</p>
+                    </div>
+                    <div class="music-card imposter">
+                        <div class="overlay">
+                            <img src="imposter-imgs/bob dole.jfif" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <a href="http://www.dolekemp96.org/agenda/issues/internet.htm"><i class="fa-solid fa-rectangle-ad"></i></a>
+                                
+                            </div>
+                        </div>
+                        <p class="song-title">Zombie Bob Dole 2024</p>
+                        <p class="song-artist">Bob Dole</p>
+                    </div>
+                    <div class="music-card 70s-music soul-music study-music">
+                        <div class="overlay">
+                            <img src="album-covers/a song for you.jfif" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">A Song For You</p>
+                        <p class="song-artist">Donny Hathaway</p>
+                    </div>
+                    <div class="music-card 70s-music rock-music workout-music">
+                        <div class="overlay">
+                            <img src="album-covers/the chain.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">The Chain</p>
+                        <p class="song-artist">Fleetwood Mac</p>
+                        <p class="sub-ultra"><i class="fa-solid fa-sack-dollar"></i> Ultra only</p>
+                    </div>
+                    <div class="music-card 70s-music rock-music workout-music">
+                        <div class="overlay">
+                            <img src="album-covers/Kashmir.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Kashmir</p>
+                        <p class="song-artist">Led Zeppelin</p>
+                        <p class="sub-ultra"><i class="fa-solid fa-sack-dollar"></i> Ultra only</p>
+                    </div>
+                    <div class="music-card 70s-music soul-music workout-music">
+                        <div class="overlay">
+                            <img src="album-covers/shining star.jfif" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Shining Star</p>
+                        <p class="song-artist">Earth, Wind & Fire</p>
+                    </div>
+                    <div class="music-card 70s-music soul-music study-music">
+                        <div class="overlay">
+                            <img src="album-covers/i wish - stevie wonder.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">I Wish</p>
+                        <p class="song-artist">Stevie Wonder</p>
+                    </div>
+                    <div class="music-card 60s-music soul-music party-music">
+                        <div class="overlay">
+                            <img src="album-covers/my girl.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">My Girl</p>
+                        <p class="song-artist">The Temptations</p>
+                    </div>
+                    <div class="music-card 60s-music soul-music study-music">
+                        <div class="overlay">
+                            <img src="album-covers/a sunday kind of love.jpg" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">A Sunday Kind of Love</p>
+                        <p class="song-artist">Etta James</p>
+                    </div>
+                    <div class="music-card 60s-music soul-music party-music">
+                        <div class="overlay">
+                            <img src="album-covers/stand by me.jfif" alt="" class="album-cover">
+                            <div class="image__overlay">
+                                <i class="fa-solid fa-circle-play play-song"></i>
+                                <i class="fa-solid fa-circle-plus add-item"></i>
+                            </div>
+                        </div>
+                        <p class="song-title">Stand By Me</p>
+                        <p class="song-artist">Ben E. King</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="subs-page">
+            <div class="subscription-plans">
+                <div class="plan-card plan1">
+                    <h1>Basic</h1>
+                    <p>$6.99 per minute</p>
+                    <p>Streaming at 1-3 Mbps</p>
+                    <p>This one sucks ngl</p>
+                    <p>Unlock filter</p>
+                    <p>You get 5 whole songs (wow!)</p>
+                    <button>SUBSCRIBE</button>
+                </div>
+                <div class="plan-card plan2">
+                    <h1>Premium</h1>
+                    <p>$420.00 per year*</p>
+                    <p>Unlock half the music</p>
+                    <p>Decent bandwidth</p>
+                    <p>Unlock add to favorites</p>
+                    <p class="caveat">*Must pay for 40 year subscription up front</p>
+                    <button>SUBSCRIBE</button>
+                </div>
+                <div class="plan-card plan3">
+                    <h1>Ultra</h1>
+                    <p>$69.99 every time you click anywhere</p>
+                    <p>Unlock all features</p>
+                    <p>15 free songs per day (randomized)</p>
+                    <p>Website crashes less</p>
+                    <p>Decent streaming quality</p>
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+
+            <div class="manage">
+
+            </div>
+            <div class="ad-container">
+                <div class="advertisement">
+                    <h1>Cancel Subscription</h1>
+                    <div class="canceler">
+                        <div class="cancelthing">
+                            <h3>We're sorry you don't like the subscription :(</h3>
+                            <p>You'll be losing out on all this great music!</p>
+                            <p>You've listened to <b>33 min</b> of premium quality music so far</p>
+                            <button>Don't Unsubscribe</button>
+                        </div>
+                        <div class="cancelthing">
+                            <h3>Why Do you want to cancel?</h3>
+                            <form action="/action_page.php">
+                                <input type="radio" id="Expensive" name="fav_language" value="Expensive">
+                                <label for="Expensive">Too Expensive</label><br>
+                                <input type="radio" id="Technical" name="fav_language" value="Technical">
+                                <label for="Technical">Technical Issue</label><br>
+                                <input type="radio" id="dontlike" name="fav_language" value="dontlike">
+                                <label for="dontlike">Don't like it anymore</label><br>
+                                <input type="radio" id="Another" name="fav_language" value="Another">
+                                <label for="Another">Another reason</label>
+                            </form>
+                            <button>Keep My Subscription</button>
+                        </div>
+                        <div class="cancelthing">
+                            <h3>Are you sure you want to leave?</h3>
+                            <p>Only idiots cancel their subscription</p>
+                            <p>Very uncool of you if you cancel</p>
+                            <button>Pause My Subscription</button>
+                        </div>
+                        <div class="cancelthing">
+                            <h3>It's your loss</h3>
+                            <p>This is the best deal you've ever had</p>
+                            <p>If you stay subscribed, we'll give you a free month!*</p>
+                            <p class="caveat">*You will have to pay this back eventually</p>
+                            <button>Get a Free Month!</button>
+                        </div>
+                        <div class="cancelthing">
+                            <h3>Please we need your money</h3>
+                            <p>This is the world's best streaming service</p>
+                            <p>No one likes a quitter</p>
+                            <button>Cancel Subscription</button>
+                        </div>
+                        <div class="cancelthing">
+                            <h3>Cancelling is for fools</h3>
+                            <p>Please dont leave</p>
+                            <button>Stay Subscribed</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-player">
+            <div class="current-song">
+                <img src="album-covers/sandstorm darude.jpg" class="album-cover">
+                <div class="song-info">
+                    <p class="song-title">Sandstorm</p>
+                    <p class="song-artist">Darude</p>
+                </div>
+            </div>
+            <div class="controls-container">
+                <div class="progress-container">
+                    <audio controls class="song-progress">
+                        <source src="songs/Rick Astley - Never Gonna Give You Up.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <div class="menu-items">
+            <div class="lightdark">
+                <a href="index.html"><i class="fa-solid fa-lightbulb"></i> Light Version</a>
+                <a href="darkindex.html"><i class="fa-regular fa-lightbulb"></i> Dark Version (you are here)</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
