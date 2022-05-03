@@ -177,7 +177,8 @@ select{
     border-left: 3px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(15px);
     */
-    background-color: #1c2632;
+    /* background-color: #1c2632; */
+    background-color: #1b2430;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 
     position: relative;
@@ -238,6 +239,33 @@ select{
 
 .music-card:hover .image__overlay{
     opacity: 1;
+}
+
+/*--------------------ADVERTISEMENT--------------------------*/
+.ad-container{
+    color: white;
+    border: 3px dotted rgb(164, 164, 164);
+    width: 50%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 21px;
+    /*
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    */
+}
+.advertisement{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 14px;
+}
+.advertisement a{
+    text-decoration: underline;
+    color: white;
 }
 
 /*-------------------PLAYER------------------------*/

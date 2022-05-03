@@ -46,17 +46,13 @@
     <main>
         <h1 class="title">Cob's Soul Music</h1>
         
-        <div class="advertisement">
-    
-        </div>
+        
     
         <div class="filters">
             <div id="decade-filter" class="filter-dropdown">
                 <label for="decade">Decade:</label>
                 <select name="decade" id="decade">
                     <option value="modern">Modern</option>
-                    <option value="2010s">2010s</option>
-                    <option value="2000s">2000s</option>
                     <option value="90s">90s</option>
                     <option value="80s">80s</option>
                     <option value="70s">70s</option>
@@ -68,7 +64,6 @@
                 <select name="genre" id="genre">
                     <option value="soul">Soul</option>
                     <option value="rock">Rock</option>
-                    <option value="r&b">R&B</option>
                     <option value="pop">Pop</option>
                 </select>
             </div>
@@ -79,14 +74,13 @@
                     <option value="funeral">Funeral</option>
                     <option value="workout">Workout</option>
                     <option value="study">Study</option>
-                    <option value="sleep">Sleep</option>
                 </select>
             </div>
         </div>
     
         <div class="songs">
             <div class="container-flex text-center">
-                <div class="music-card">
+                <div class="music-card modern-music pop-music funeral-music">
                     <div class="overlay">
                         <img src="album-covers/Cars_Soundtrack.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -97,7 +91,18 @@
                     <p class="song-title">Life is a Highway</p>
                     <p class="song-artist">Rascal Flatts</p>
                 </div>
-                <div class="music-card 90s-music">
+                <div class="music-card modern-music pop-music party-music">
+                    <div class="overlay">
+                        <img src="album-covers/sandstorm darude.jpg" alt="" class="album-cover">
+                        <div class="image__overlay">
+                            <i class="fa-solid fa-circle-play play-song"></i>
+                            <i class="fa-solid fa-circle-plus add-item"></i>
+                        </div>
+                    </div>
+                    <p class="song-title">Darude</p>
+                    <p class="song-artist">Sandstorm</p>
+                </div>
+                <div class="music-card 90s-music pop-music party-music">
                     <div class="overlay">
                         <img src="album-covers/I want it that way - backstreet boys.jfif" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -108,7 +113,7 @@
                     <p class="song-title">I want it that way</p>
                     <p class="song-artist">Backstreet boys</p>
                 </div>
-                <div class="music-card 90s-music">
+                <div class="music-card 90s-music soul-music workout-music">
                     <div class="overlay">
                         <img src="album-covers/gangstas paradise.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -119,7 +124,7 @@
                     <p class="song-title">Gangsta's Paradise</p>
                     <p class="song-artist">Coolio, L.V.</p>
                 </div>
-                <div class="music-card 90s-music">
+                <div class="music-card 90s-music pop-music party-music">
                     <div class="overlay">
                         <img src="album-covers/baby one more time.png" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -130,7 +135,7 @@
                     <p class="song-title">Baby one more time</p>
                     <p class="song-artist">Brittney Spears</p>
                 </div>
-                <div class="music-card 90s-music">
+                <div class="music-card 90s-music rock-music study-music">
                     <div class="overlay">
                         <img src="album-covers/heartshaped box.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -141,7 +146,7 @@
                     <p class="song-title">Heart-Shaped Box</p>
                     <p class="song-artist">Nirvana</p>
                 </div>
-                <div class="music-card 90s-music">
+                <div class="music-card 90s-music rock-music study-music">
                     <div class="overlay">
                         <img src="album-covers/creep - radiohead.png" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -152,7 +157,7 @@
                     <p class="song-title">Creep</p>
                     <p class="song-artist">Radiohead</p>
                 </div>
-                <div class="music-card 90s-music">
+                <div class="music-card 90s-music pop-music study-music">
                     <div class="overlay">
                         <img src="album-covers/weak swv.gif" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -163,18 +168,7 @@
                     <p class="song-title">Weak</p>
                     <p class="song-artist">SWV</p>
                 </div>
-                <div class="music-card 80s-music">
-                    <div class="overlay">
-                        <img src="album-covers/Another_one_bites_the_dust.jpg" alt="" class="album-cover">
-                        <div class="image__overlay">
-                            <i class="fa-solid fa-circle-play play-song"></i>
-                            <i class="fa-solid fa-circle-plus add-item"></i>
-                        </div>
-                    </div>
-                    <p class="song-title">Another One Bites the Dust</p>
-                    <p class="song-artist">Queen</p>
-                </div>
-                <div class="music-card 80s-music">
+                <div class="music-card 80s-music pop-music party-music">
                     <div class="overlay">
                         <img src="album-covers/Rock_With_You.webp" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -185,7 +179,7 @@
                     <p class="song-title">Rock With You</p>
                     <p class="song-artist">Michael Jackson</p>
                 </div>
-                <div class="music-card 80s-music">
+                <div class="music-card 80s-music pop-music party-music">
                     <div class="overlay">
                         <img src="album-covers/take on me.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -196,7 +190,7 @@
                     <p class="song-title">Take On Me</p>
                     <p class="song-artist">a-ha</p>
                 </div>
-                <div class="music-card 80s-music">
+                <div class="music-card 80s-music soul-music workout-music">
                     <div class="overlay">
                         <img src="album-covers/careless whisper.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -207,7 +201,7 @@
                     <p class="song-title">Careless Whisper</p>
                     <p class="song-artist">George Michael</p>
                 </div>
-                <div class="music-card 80s-music">
+                <div class="music-card 80s-music soul-music study-music">
                     <div class="overlay">
                         <img src="album-covers/sweet love.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -218,7 +212,7 @@
                     <p class="song-title">Sweet Love</p>
                     <p class="song-artist">Anita Baker</p>
                 </div>
-                <div class="music-card 80s-music">
+                <div class="music-card 80s-music pop-music study-music">
                     <div class="overlay">
                         <img src="album-covers/Tom's_diner.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -229,7 +223,7 @@
                     <p class="song-title">Tom's Diner</p>
                     <p class="song-artist">Suzanne Vega</p>
                 </div>
-                <div class="music-card 80s-music">
+                <div class="music-card 80s-music pop-music party-music">
                     <div class="overlay">
                         <img src="album-covers/material girl.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -240,7 +234,7 @@
                     <p class="song-title">Material Girl</p>
                     <p class="song-artist">Madonna</p>
                 </div>
-                <div class="music-card 80s-music">
+                <div class="music-card 80s-music rock-music workout-music">
                     <div class="overlay">
                         <img src="album-covers/I_Wanna_Rock.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -251,7 +245,7 @@
                     <p class="song-title">I Wanna Rock</p>
                     <p class="song-artist">Twisted Sister</p>
                 </div>
-                <div class="music-card 70s-music">
+                <div class="music-card 70s-music rock-music workout-music">
                     <div class="overlay">
                         <img src="album-covers/rocket man.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -262,7 +256,7 @@
                     <p class="song-title">Rocket Man</p>
                     <p class="song-artist">Elton John</p>
                 </div>
-                <div class="music-card 70s-music">
+                <div class="music-card 70s-music soul-music study-music">
                     <div class="overlay">
                         <img src="album-covers/a song for you.jfif" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -273,7 +267,7 @@
                     <p class="song-title">A Song For You</p>
                     <p class="song-artist">Donny Hathaway</p>
                 </div>
-                <div class="music-card 70s-music">
+                <div class="music-card 70s-music rock-music workout-music">
                     <div class="overlay">
                         <img src="album-covers/the chain.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -284,7 +278,7 @@
                     <p class="song-title">The Chain</p>
                     <p class="song-artist">Fleetwood Mac</p>
                 </div>
-                <div class="music-card 70s-music">
+                <div class="music-card 70s-music rock-music workout-music">
                     <div class="overlay">
                         <img src="album-covers/Kashmir.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -295,7 +289,7 @@
                     <p class="song-title">Kashmir</p>
                     <p class="song-artist">Led Zeppelin</p>
                 </div>
-                <div class="music-card 70s-music">
+                <div class="music-card 70s-music soul-music workout-music">
                     <div class="overlay">
                         <img src="album-covers/shining star.jfif" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -306,7 +300,7 @@
                     <p class="song-title">Shining Star</p>
                     <p class="song-artist">Earth, Wind & Fire</p>
                 </div>
-                <div class="music-card 70s-music">
+                <div class="music-card 70s-music soul-music study-music">
                     <div class="overlay">
                         <img src="album-covers/i wish - stevie wonder.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -317,7 +311,7 @@
                     <p class="song-title">I Wish</p>
                     <p class="song-artist">Stevie Wonder</p>
                 </div>
-                <div class="music-card 60s-music">
+                <div class="music-card 60s-music soul-music party-music">
                     <div class="overlay">
                         <img src="album-covers/my girl.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -328,7 +322,7 @@
                     <p class="song-title">My Girl</p>
                     <p class="song-artist">The Temptations</p>
                 </div>
-                <div class="music-card 60s-music">
+                <div class="music-card 60s-music soul-music study-music">
                     <div class="overlay">
                         <img src="album-covers/a sunday kind of love.jpg" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -339,7 +333,7 @@
                     <p class="song-title">A Sunday Kind of Love</p>
                     <p class="song-artist">Etta James</p>
                 </div>
-                <div class="music-card 60s-music">
+                <div class="music-card 60s-music soul-music party-music">
                     <div class="overlay">
                         <img src="album-covers/stand by me.jfif" alt="" class="album-cover">
                         <div class="image__overlay">
@@ -353,12 +347,22 @@
             </div>
         </div>
 
+        <div class="ad-container">
+            <div class="advertisement">
+                
+                <h2>Our Sponsors <i class="fa-solid fa-people-roof"></i></h2>
+                <p>Cereal Flakes, “Asbestos free”</p>
+                <p>Jim’s Brake Pads, “They work every time, 50% of the time”</p>
+                <p><a href="http://www.dolekemp96.org/agenda/issues/internet.htm">Zombie Bob Dole 2024</a></p>
+            </div>
+        </div>
+        
         <div class="music-player">
             <div class="current-song">
-                <img src="album-covers/Cars_Soundtrack.jpg" class="album-cover">
+                <img src="album-covers/sandstorm darude.jpg" class="album-cover">
                 <div class="song-info">
-                    <p class="song-title">Life is a Highway</p>
-                    <p class="song-artist">dem boys</p>
+                    <p class="song-title">Sandstorm</p>
+                    <p class="song-artist">Darude</p>
                 </div>
             </div>
             <div class="controls-container">

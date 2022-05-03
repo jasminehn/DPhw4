@@ -21,6 +21,20 @@ function ready() {
         }
     })
 
+    //listener for filters
+    var decadeFilter = document.getElementById('decade')
+    decadeFilter.addEventListener("change", function() {
+        filterDecade(decadeFilter.value)
+    })
+    var genreFilter = document.getElementById('genre')
+    genreFilter.addEventListener("change", function() {
+        filterGenre(genreFilter.value)
+    })
+    var occasionFilter = document.getElementById('occasion')
+    occasionFilter.addEventListener("change", function() {
+        filterOccasion(occasionFilter.value)
+    })
+
     //play song
     var playSongButtons = document.getElementsByClassName('play-song')
     for (var i = 0; i < playSongButtons.length; i++) {
@@ -138,4 +152,205 @@ function removeItem(event) {
     //console.log(buttonClicked.parentElement.parentElement)
     buttonClicked.parentElement.parentElement.remove()
     
+}
+
+function filterDecade(decade){
+    console.log(decade)
+
+    var filterModernMusic = document.getElementsByClassName('modern-music')
+    var filter90sMusic = document.getElementsByClassName('90s-music')
+    var filter80sMusic = document.getElementsByClassName('80s-music')
+    var filter70sMusic = document.getElementsByClassName('70s-music')
+    var filter60sMusic = document.getElementsByClassName('60s-music')
+
+    if(decade == 'modern'){
+        for(var i = 0; i < filterModernMusic.length; i++){
+            filterModernMusic[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filter90sMusic.length; i++){
+            filter90sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter80sMusic.length; i++){
+            filter80sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter70sMusic.length; i++){
+            filter70sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter60sMusic.length; i++){
+            filter60sMusic[i].style.display = "none"; 
+        }
+    }
+    if(decade == '90s'){
+        for(var i = 0; i < filter90sMusic.length; i++){
+            filter90sMusic[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterModernMusic.length; i++){
+            filterModernMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter80sMusic.length; i++){
+            //filter80sMusic[i].style.visibility = "hidden"; // or
+            filter80sMusic[i].style.display = "none"; // depending on what you're doing
+        }
+        for(var i = 0; i < filter70sMusic.length; i++){
+            filter70sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter60sMusic.length; i++){
+            filter60sMusic[i].style.display = "none"; 
+        }
+    }
+    if(decade == '80s'){
+        for(var i = 0; i < filter80sMusic.length; i++){
+            filter80sMusic[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterModernMusic.length; i++){
+            filterModernMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter90sMusic.length; i++){
+            filter90sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter70sMusic.length; i++){
+            filter70sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter60sMusic.length; i++){
+            filter60sMusic[i].style.display = "none"; 
+        }
+    }
+    if(decade == '70s'){
+        for(var i = 0; i < filter70sMusic.length; i++){
+            filter70sMusic[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterModernMusic.length; i++){
+            filterModernMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter90sMusic.length; i++){
+            filter90sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter80sMusic.length; i++){
+            filter80sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter60sMusic.length; i++){
+            filter60sMusic[i].style.display = "none"; 
+        }
+    }
+    if(decade == '60s'){
+        for(var i = 0; i < filter60sMusic.length; i++){
+            filter60sMusic[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterModernMusic.length; i++){
+            filterModernMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter90sMusic.length; i++){
+            filter90sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter80sMusic.length; i++){
+            filter80sMusic[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filter70sMusic.length; i++){
+            filter70sMusic[i].style.display = "none"; 
+        }
+    }
+}
+
+function filterGenre(genre){
+    var filterSoul = document.getElementsByClassName('soul-music')
+    var filterRock = document.getElementsByClassName('rock-music')
+    var filterPop = document.getElementsByClassName('pop-music')
+
+    if(genre == 'soul'){
+        for(var i = 0; i < filterSoul.length; i++){
+            filterSoul[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterRock.length; i++){
+            filterRock[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterPop.length; i++){
+            filterPop[i].style.display = "none"; 
+        }
+    }
+    if(genre == 'rock'){
+        for(var i = 0; i < filterRock.length; i++){
+            filterRock[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterSoul.length; i++){
+            filterSoul[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterPop.length; i++){
+            filterPop[i].style.display = "none"; 
+        }
+    }
+    if(genre == 'pop'){
+        for(var i = 0; i < filterPop.length; i++){
+            filterPop[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterRock.length; i++){
+            filterRock[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterSoul.length; i++){
+            filterSoul[i].style.display = "none"; 
+        }
+    }
+}
+
+function filterOccasion(occasion){
+    var filterParty = document.getElementsByClassName('party-music')
+    var filterFuneral = document.getElementsByClassName('funeral-music')
+    var filterWorkout = document.getElementsByClassName('workout-music')
+    var filterStudy = document.getElementsByClassName('study-music')
+
+    if(occasion == 'party'){
+        for(var i = 0; i < filterParty.length; i++){
+            filterParty[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterFuneral.length; i++){
+            filterFuneral[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterWorkout.length; i++){
+            filterWorkout[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterStudy.length; i++){
+            filterStudy[i].style.display = "none"; 
+        }
+    }
+    if(occasion == 'funeral'){
+        for(var i = 0; i < filterFuneral.length; i++){
+            filterFuneral[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterParty.length; i++){
+            filterParty[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterWorkout.length; i++){
+            filterWorkout[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterStudy.length; i++){
+            filterStudy[i].style.display = "none"; 
+        }
+    }
+    if(occasion == 'workout'){
+        for(var i = 0; i < filterWorkout.length; i++){
+            filterWorkout[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterFuneral.length; i++){
+            filterFuneral[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterParty.length; i++){
+            filterParty[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterStudy.length; i++){
+            filterStudy[i].style.display = "none"; 
+        }
+    }
+    if(occasion == 'study'){
+        for(var i = 0; i < filterStudy.length; i++){
+            filterStudy[i].style.display = "block"; 
+        }
+        for(var i = 0; i < filterFuneral.length; i++){
+            filterFuneral[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterParty.length; i++){
+            filterParty[i].style.display = "none"; 
+        }
+        for(var i = 0; i < filterWorkout.length; i++){
+            filterWorkout[i].style.display = "none"; 
+        }
+    }
 }
