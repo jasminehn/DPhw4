@@ -482,12 +482,12 @@ input[type="radio"]{
 
 .sub-locked{
     color: #43A047;
-    font-size: 11px;
+    font-size: 8px;
     text-align: right;
 }
 .sub-ultra{
     color: #dacc0a;
-    font-size: 11px;
+    font-size: 8px;
     text-align: right;
 }
 
