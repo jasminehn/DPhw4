@@ -86,6 +86,14 @@ function ready() {
         var button = removeItemButtons[i]
         button.addEventListener('click', removeItem)
     }
+
+    //get amount of time the user has listened to music
+    var audioPlayer = document.getElementsByClassName('song-progress')[0]
+    audioPlayer.addEventListener('playing', function() {
+        console.log('HELLO???????')
+        var timesPlayed = audioPlayer.played
+        console.log("total time played:" + timesPlayed)
+    })
 }
 
 function addToFavoritesClicked(event) {
@@ -414,7 +422,7 @@ function filterOccasion(occasion){
           const now = new Date().getTime(),
                 distance = countDown - now;
   
-          document.getElementById("days").innerText = days,
+            document.getElementById("days").innerText = days,
             document.getElementById("hours").innerText = hours,
             document.getElementById("minutes").innerText = minutes,
             document.getElementById("seconds").innerText = seconds;

@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="darkstyle.css">
     <link rel="shortcut icon" href="#">
-    <script src="darkscript.js"></script>
+    
     <script src="https://kit.fontawesome.com/69c6d76ec7.js" crossorigin="anonymous"></script>
     <title>Cob's Soul Music</title>
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar"> <!--NAVIGATION BAR-->
         <div class="other-buttons">
             <p class="home-button">Home</p>
             <p class="subs-button" onclick="emailSubscription()">Subscriptions</p>
             <p class="fav-button">Favorites <i class="fa-solid fa-bars"></i></p>
         </div>
         
-        <div class="favorites">
+        <div class="favorites"> <!--FAVORITES LIST-->
             <table class="fav-list" id="favorites-table">
                 <tbody>
                     <tr class="fav-song">
@@ -47,7 +47,8 @@
             </table>
         </div>
     </div>
-    <div class="da-sale">
+
+    <div class="da-sale"> <!--EARN NEXT FREE SONG IN-->
         <div class="countdown-container">
             <h1 id="headline">You earn your next free song in</h1>
             <div id="countdown">
@@ -60,18 +61,21 @@
             </div>
         </div>
     </div>
-    <div class="point-system">
+
+    <div class="point-system"> <!--POINTS PER MINUTE-->
         <p>For every 1 minute of music you listen to, you earn 10 points!</p>
         <p>10,000 points can be traded in for an additonal day on your subscription.</p>
         <div class="points">
-            <label for="file">Current points: 400/10,000</label>
+            <label for="file"><b>Current points:</b> 400/10,000</label>
             <progress id="file" value="400" max="10000"></progress>
         </div>
     </div>
+
     <main>
         <h1 class="title">Cob's Soul Music</h1>
         <div class="home-page">
-            <div class="filters">
+
+            <div class="filters"> <!--FILTER SONGS BY DECADE, GENRE, OCCASION-->
                 <div id="decade-filter" class="filter-dropdown">
                     <label for="decade">Decade:</label>
                     <select name="decade" id="decade">
@@ -101,7 +105,7 @@
                 </div>
             </div>
         
-            <div class="songs">
+            <div class="songs"> <!--LIST OF SONGS ON HOME PAGE-->
                 <div class="container-flex text-center">
                     <div class="music-card modern-music pop-music funeral-music">
                         <div class="overlay">
@@ -434,14 +438,14 @@
             
         </div>
 
-        <div class="subs-page">
+        <div class="subs-page"> <!--SUBSCRIPTIONS PAGE-->
             <div class="subscription-plans">
                 <div class="plan-card plan1">
                     <h1>Basic</h1>
                     <p>$6.99 per minute</p>
                     <p>Streaming at 1-3 Mbps</p>
                     <p>This one sucks ngl</p>
-                    <p>Unlock filter</p>
+                    <p>Unlock filters feature</p>
                     <p>You get 5 whole songs (wow!)</p>
                     <button>SUBSCRIBE</button>
                 </div>
@@ -469,7 +473,7 @@
 
             </div>
 
-            <div class="ad-container">
+            <div class="ad-container"> <!--CANCEL SUBSCRIPTION-->
                 <div class="advertisement">
                     <h1>Cancel Subscription</h1>
                     <div class="canceler">
@@ -507,7 +511,7 @@
                             <button>Get a Free Month!</button>
                         </div>
                         <div class="cancelthing">
-                            <h3>Please we need your money</h3>
+                            <h3>Please, we need your money</h3>
                             <p>This is the world's best streaming service</p>
                             <p>No one likes a quitter</p>
                             <button>Cancel Subscription</button>
@@ -523,7 +527,7 @@
             </div>
         </div>
 
-        <div class="music-player">
+        <div class="music-player"> <!--MUSIC PLAYER AT BOTTOM OF SCREEN-->
             <div class="current-song">
                 <img src="album-covers/sandstorm darude.jpg" class="album-cover">
                 <div class="song-info">
@@ -540,8 +544,10 @@
                 </div>
             </div>
         </div>
+
     </main>
-    <div class="footer">
+
+    <div class="footer"> <!--DARK AND LIGHT VERSION-->
         <div class="menu-items">
             <div class="lightdark">
                 <a href="index.html"><i class="fa-solid fa-lightbulb"></i> Light Version</a>
@@ -549,5 +555,8 @@
             </div>
         </div>
     </div>
+
+    <script src="darkscript.js"></script>
 </body>
+
 </html>
